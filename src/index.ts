@@ -39,17 +39,15 @@ document.addEventListener('DOMContentLoaded', function () {
     button.addEventListener('click', () => handleClick(index));
   });
 
-  // //Quotes slider
-  // const quoteSlider = new Splide('#quote-slider', {
-  //   type: 'slide',
-  //   autoWidth: true,
-  //   speed: 600,
-  //   arrows: true,
-  //   pagination: false,
-  //   flickPower: 500,
-  //   focus: 0,
-  //   omitEnd: true,
-  //   trimSpace: false,
-  // });
-  // quoteSlider.mount();
+  //Quotes slider
+  const quoteSlider = new Splide('#quote-slider', {
+    type: 'loop',
+    autoWidth: true,
+    speed: 600,
+    arrows: true,
+    pagination: true,
+    flickPower: 500,
+    updateOnMove: true,
+  });
+  quoteSlider.mount();
 });
