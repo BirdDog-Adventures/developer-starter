@@ -50,4 +50,20 @@ document.addEventListener('DOMContentLoaded', function () {
     updateOnMove: true,
   });
   quoteSlider.mount();
+
+  //Captions
+  const galleryImgs = document.querySelectorAll('.event-gallery_img');
+  if (galleryImgs) {
+    galleryImgs.forEach(function (el) {
+      const caption = el.getAttribute('alt');
+      if (caption) {
+        el.insertAdjacentHTML(
+          'afterend',
+          `
+          <div class="event-gallery_caption">${caption}</div>
+          `
+        );
+      }
+    });
+  }
 });
